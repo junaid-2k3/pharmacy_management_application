@@ -1,7 +1,9 @@
 node_modules/
 .agents/
 .env
+data/
 *.db
+*.db-*
 *.sqlite
 *.sqlite3
 .DS_Store
