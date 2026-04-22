@@ -1,0 +1,25 @@
+{
+  "name": "waseela-pharmacy-web",
+  "version": "1.0.0",
+  "description": "Pharmacy Management System MVP web app",
+  "main": "backend/src/server.js",
+  "scripts": {
+    "start": "node backend/src/server.js",
+    "dev": "node --watch backend/src/server.js",
+    "init-db": "node backend/src/db/initDb.js"
+  },
+  "keywords": [
+    "pharmacy",
+    "sqlite",
+    "express",
+    "mvp"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "better-sqlite3": "^11.8.1",
+    "cors": "^2.8.5",
+    "express": "^4.21.2",
+    "morgan": "^1.10.0"
+  }
+}

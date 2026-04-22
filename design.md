@@ -1,11 +1,11 @@
-# WASEELA — Pharmacy Management System
+# Pharmacy Management System
 ## Design Document v1.0
 
 ---
 
 ## 1. Overview
 
-WASEELA is a pharmacy POS and inventory management system. This document defines the redesign direction — moving from the current legacy desktop UI to a modern, clean web-based interface while preserving all existing workflows.
+ pharmacy POS and inventory management system. This document defines the redesign direction — moving from the current legacy desktop UI to a modern, clean web-based interface while preserving all existing workflows.
 
 ---
 
@@ -150,5 +150,3 @@ WASEELA is a pharmacy POS and inventory management system. This document defines
 - Error messages linked to inputs via `aria-describedby`
 
 ---
-
-*Version 1.0 — Waseela Pharmacy, Rawalpindi*

@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WASEELA Pharmacy PMS</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@500;700&family=IBM+Plex+Sans:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/styles.css" />
+  </head>
+  <body>
+    <div class="bg-shape bg-shape-a"></div>
+    <div class="bg-shape bg-shape-b"></div>
+    <div class="app-shell">
+      <aside class="sidebar">
+        <div class="brand">WASEELA</div>
+        <nav class="nav" id="nav"></nav>
+      </aside>
+      <main class="main">
+        <header class="topbar">
+          <h1 id="pageTitle">Dashboard</h1>
+          <div class="topbar-actions">
+            <button id="refreshBtn" class="btn btn-light">Refresh</button>
+          </div>
+        </header>
+        <section id="alertsBar" class="alerts-bar"></section>
+        <section id="appContent" class="content"></section>
+      </main>
+    </div>
+
+    <template id="toastTemplate">
+      <div class="toast"></div>
+    </template>
+
+    <script src="assets/js/app.js"></script>
+  </body>
+</html>

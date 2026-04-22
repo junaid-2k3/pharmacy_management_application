@@ -110,6 +110,61 @@ Outputs workflow test results and summary counts.
 - Sample data inserts are idempotent (`ON DUPLICATE KEY UPDATE`) to support re-runs.
 - This repository currently focuses on the **data layer**. Frontend/backend implementation can be built on top of this schema.
 
+## Web App Implementation (April 2026)
+
+The repository now includes a working **Node.js + Express + SQLite + Vanilla JS** MVP implementation.
+
+### Added Structure
+
+- `backend/src/`
+  - `server.js` - Express app bootstrap + static frontend hosting
+  - `db/` - SQLite connection, migration runner, and SQL migrations
+  - `routes/` - API modules for medicines, purchases, sales, and reports
+  - `middleware/` - async/error handlers
+- `frontend/`
+  - `index.html` - app shell and navigation
+  - `assets/css/styles.css` - design token based styling
+  - `assets/js/app.js` - page logic and API integration
+- `data/`
+  - `pharmacy.db` (generated at runtime)
+
+### API Coverage
+
+- Medicine management: add/list/search/update/archive
+- Purchase entry: transactional create with line items and stock intake
+- Sales: transactional create with FEFO batch consumption and cash-only enforcement
+- Reporting: low-stock, expiry alerts, sales summary, purchase history
+- Receipt payload endpoint for print flow
+
+### Run the Full App
+
+```bash
+npm install
+npm run init-db
+npm start
+```
+
+Then open:
+
+```text
+http://localhost:3000
+```
+
+### Environment
+
+Copy `.env.example` to `.env` and adjust as needed:
+
+```bash
+PORT=3000
+DB_PATH=./data/pharmacy.db
+```
+
+### Notes About Scope Alignment
+
+- MVP rules from `MVP.md` are enforced where they conflict with `design.md`.
+- Implemented as a web architecture (`Express REST + SQLite`) per confirmed decision.
+- Supplier module, discounts, multi-payment, stock adjustment, and auth/roles remain out of scope for v1.
+
 ## Version
 
 - Document baseline: March 2026
